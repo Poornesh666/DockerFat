@@ -3,171 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Computer Science Department - XYZ University</title>
+    <title>Computer Science Department - University of Technology</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f5f5; line-height: 1.6; }
-        header { background: linear-gradient(135deg, #003d7a 0%, #1a5c96 100%); color: #fff; padding: 3rem 1rem; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        header p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 0.5rem; }
-        .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
-        .admin-section { background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 2rem; }
-        .admin-heads { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 1.5rem; }
-        .admin-head { background: #f9f9f9; padding: 1.5rem; border-radius: 5px; border-left: 4px solid #003d7a; }
-        .admin-head h4 { color: #003d7a; margin-bottom: 0.3rem; }
-        .admin-head p { color: #666; font-size: 0.95rem; }
-        .section { background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 2rem; }
-        .section h2 { color: #003d7a; margin-bottom: 1.5rem; border-bottom: 3px solid #1a5c96; padding-bottom: 0.5rem; }
-        .about-content { color: #333; line-height: 1.8; }
-        .courses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
-        .course-card { background: #f0f4f8; padding: 1.5rem; border-radius: 5px; border-left: 4px solid #1a5c96; }
-        .course-card h4 { color: #003d7a; margin-bottom: 0.5rem; }
-        .course-card p { color: #555; font-size: 0.95rem; }
-        .faculty-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
-        .faculty-card { background: #f0f4f8; padding: 1.5rem; border-radius: 5px; border: 2px solid #ddd; text-align: center; }
-        .faculty-card h4 { color: #003d7a; margin-bottom: 0.3rem; }
-        .faculty-card .designation { color: #1a5c96; font-weight: bold; font-size: 0.9rem; margin: 0.3rem 0; }
-        .faculty-card .expertise { color: #666; font-size: 0.85rem; font-style: italic; }
-        .contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 1.5rem; }
-        .contact-item { background: #f0f4f8; padding: 1.5rem; border-radius: 5px; }
-        .contact-item h4 { color: #003d7a; margin-bottom: 0.5rem; }
-        .contact-item p { color: #333; }
-        footer { background: #003d7a; color: #fff; text-align: center; padding: 2rem; margin-top: 3rem; }
-        footer p { margin: 0.5rem 0; }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #f8f9ff;
+            margin: 1rem 0;
+            padding: 1rem;
+            border-left: 4px solid #667eea;
+        }
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        .faculty-member {
+            background: #f8f9ff;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .container { padding: 0 1rem; }
+        }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
-        <h1>🎓 XYZ University</h1>
-        <p>Excellence in Education and Research</p>
-        <p style="font-size: 0.95rem; margin-top: 0.5rem;">Founded in 1985, XYZ University is a premier institution dedicated to fostering academic excellence, innovative research, and holistic student development.</p>
+        <h1>University of Technology</h1>
+        <p>A leading institution dedicated to excellence in education, research, and innovation. Established in 1965, we foster a vibrant academic community with state-of-the-art facilities and world-class faculty.</p>
+        <p><strong>Vice Chancellor:</strong> Dr. Alice Johnson | <strong>Dean of Engineering:</strong> Prof. Bob Smith</p>
     </header>
 
     <div class="container">
-        <!-- Administrative Heads Section -->
-        <div class="admin-section">
-            <h2 style="color: #003d7a; margin-bottom: 1rem;">Administrative Leadership</h2>
-            <div class="admin-heads">
-                <div class="admin-head">
-                    <h4>Vice Chancellor</h4>
-                    <p><strong>Dr. James Anderson</strong></p>
-                    <p>Overseeing academic and administrative affairs</p>
-                </div>
-                <div class="admin-head">
-                    <h4>Dean of Academic Affairs</h4>
-                    <p><strong>Prof. Sarah Williams</strong></p>
-                    <p>Managing curriculum and academic programs</p>
-                </div>
-                <div class="admin-head">
-                    <h4>Director of Research</h4>
-                    <p><strong>Dr. Michael Chen</strong></p>
-                    <p>Coordinating research initiatives and grants</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- About Section -->
-        <div class="section">
+        <section id="about">
             <h2>About Computer Science Department</h2>
-            <div class="about-content">
-                <p>The Computer Science Department at XYZ University is committed to providing world-class education in computing and information technology. Our department combines theoretical knowledge with practical application, preparing students for careers in software development, artificial intelligence, cybersecurity, and emerging technologies.</p>
-                <p style="margin-top: 1rem;">With state-of-the-art laboratories, experienced faculty, and industry partnerships, we ensure that our students gain hands-on experience and are well-equipped to tackle real-world challenges in the rapidly evolving tech industry.</p>
-            </div>
-        </div>
+            <p>The Department of Computer Science is at the forefront of technological advancement, offering cutting-edge programs in software engineering, artificial intelligence, cybersecurity, and data science. With a focus on practical skills and research, our graduates are leaders in the tech industry.</p>
+        </section>
 
-        <!-- Courses Section -->
-        <div class="section">
+        <section id="courses">
             <h2>Courses Offered</h2>
-            <div class="courses-grid">
-                <div class="course-card">
-                    <h4>📱 Introduction to Programming</h4>
-                    <p>Learn the fundamentals of programming with Python and Java, covering basic data structures, control flow, and object-oriented programming principles.</p>
-                </div>
-                <div class="course-card">
-                    <h4>🌐 Web Development</h4>
-                    <p>Master HTML, CSS, JavaScript, and modern frameworks like React and Node.js to build responsive web applications.</p>
-                </div>
-                <div class="course-card">
-                    <h4>🗄️ Database Management Systems</h4>
-                    <p>Explore relational databases, SQL, and advanced database design patterns for efficient data storage and retrieval.</p>
-                </div>
-                <div class="course-card">
-                    <h4>🤖 Artificial Intelligence & Machine Learning</h4>
-                    <p>Dive into machine learning algorithms, neural networks, and AI applications using Python libraries like TensorFlow and scikit-learn.</p>
-                </div>
-                <div class="course-card">
-                    <h4>🔒 Cybersecurity</h4>
-                    <p>Understand network security, cryptography, and ethical hacking techniques to protect digital assets and systems.</p>
-                </div>
-                <div class="course-card">
-                    <h4>☁️ Cloud Computing</h4>
-                    <p>Learn deployment and management on AWS, Azure, and Google Cloud, including containerization and microservices architecture.</p>
-                </div>
-            </div>
-        </div>
+            <ul>
+                <li>
+                    <h3>B.Sc. Computer Science</h3>
+                    <p>Fundamental concepts in programming, algorithms, data structures, and computer systems. Duration: 4 years.</p>
+                </li>
+                <li>
+                    <h3>M.Sc. Artificial Intelligence</h3>
+                    <p>Advanced topics in machine learning, neural networks, natural language processing, and robotics. Duration: 2 years.</p>
+                </li>
+                <li>
+                    <h3>Ph.D. Cybersecurity</h3>
+                    <p>Research-oriented program focusing on network security, cryptography, ethical hacking, and digital forensics.</p>
+                </li>
+                <li>
+                    <h3>B.Tech. Software Engineering</h3>
+                    <p>Practical training in software development lifecycle, agile methodologies, DevOps, and cloud computing. Duration: 4 years.</p>
+                </li>
+            </ul>
+        </section>
 
-        <!-- Faculty Section -->
-        <div class="section">
+        <section id="faculty">
             <h2>Faculty Members</h2>
             <div class="faculty-grid">
-                <div class="faculty-card">
-                    <h4>Prof. David Turner</h4>
-                    <div class="designation">Head of Department</div>
-                    <div class="expertise">Expertise: Software Architecture, System Design</div>
+                <div class="faculty-member">
+                    <h3>Dr. Carol Davis</h3>
+                    <p><strong>Professor &amp; Head</strong> | AI, Machine Learning</p>
                 </div>
-                <div class="faculty-card">
-                    <h4>Dr. Emily Rodriguez</h4>
-                    <div class="designation">Associate Professor</div>
-                    <div class="expertise">Expertise: Machine Learning, AI Applications</div>
+                <div class="faculty-member">
+                    <h3>Prof. David Wilson</h3>
+                    <p><strong>Associate Professor</strong> | Cybersecurity, Networks</p>
                 </div>
-                <div class="faculty-card">
-                    <h4>Dr. Rajesh Patel</h4>
-                    <div class="designation">Associate Professor</div>
-                    <div class="expertise">Expertise: Database Systems, Big Data Analytics</div>
+                <div class="faculty-member">
+                    <h3>Dr. Eva Martinez</h3>
+                    <p><strong>Assistant Professor</strong> | Software Engineering, Databases</p>
                 </div>
-                <div class="faculty-card">
-                    <h4>Dr. Lisa Chen</h4>
-                    <div class="designation">Assistant Professor</div>
-                    <div class="expertise">Expertise: Cybersecurity, Network Administration</div>
-                </div>
-                <div class="faculty-card">
-                    <h4>Prof. Marcus Johnson</h4>
-                    <div class="designation">Assistant Professor</div>
-                    <div class="expertise">Expertise: Web Development, Cloud Computing</div>
-                </div>
-                <div class="faculty-card">
-                    <h4>Dr. Sophia Mikhailov</h4>
-                    <div class="designation">Lecturer</div>
-                    <div class="expertise">Expertise: Data Structures, Algorithm Design</div>
+                <div class="faculty-member">
+                    <h3>Prof. Frank Kim</h3>
+                    <p><strong>Professor</strong> | Algorithms, Data Science</p>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Contact Section -->
-        <div class="section">
-            <h2>Contact Information</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h4>📍 Address</h4>
-                    <p>Computer Science Building, Block A<br>XYZ University Campus<br>Tech City, State 12345<br>Country</p>
-                </div>
-                <div class="contact-item">
-                    <h4>📞 Phone</h4>
-                    <p>Main Office: +1 (555) 123-4567<br>Department Head: +1 (555) 123-4568<br>General Inquiry: +1 (555) 123-4569</p>
-                </div>
-                <div class="contact-item">
-                    <h4>📧 Email</h4>
-                    <p>Department: cs@xyzuniversity.edu<br>Admissions: admissions@xyzuniversity.edu<br>Support: support@xyzuniversity.edu</p>
-                </div>
-            </div>
-        </div>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p><strong>Address:</strong> Computer Science Dept., University of Technology, 123 Tech Avenue, Innovation City, 12345</p>
+            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+            <p><strong>Email:</strong> csdept@ut.edu | <strong>Website:</strong> cs.ut.edu</p>
+        </section>
     </div>
 
-    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2026 XYZ University - Computer Science Department. All rights reserved.</p>
-        <p>Deployed with Docker + Jenkins + Kubernetes</p>
+        <p>&amp;copy; 2024 University of Technology. All rights reserved. | Designed for Computer Science Department.</p>
     </footer>
 </body>
 </html>
